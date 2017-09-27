@@ -105,5 +105,12 @@ There is a [sample application](https://github.com/TargetProcess/signalr-client-
 
 ## Troubleshooting
 
+#### Using a SignalR server running HTTPS with custom a certificate chain
+Add `WEBSOCKET_CLIENT_CA_BUNDLE` variable to the environment. This variable should point to the CA (Certificate Authority) bundle including the certificate to verify the server's certificate. Below is an example on a Ubuntu based system.
+
+```
+export WEBSOCKET_CLIENT_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+```
+
 #### dnvm is not available on Mac OS X after installation
 Run ```source dnvm.sh```.
